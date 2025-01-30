@@ -18,5 +18,71 @@
     </nav>
 
     <h1>More Forms</h1>
+
+    <form action="moreforms.html" method="get">
+      <div>
+        <input
+          type="checkbox"
+          name="soulContract"
+          id="soulContract"
+          checked
+          disabled
+          value="signed"
+        />
+        <label for="soulContract">Sign away your soul</label>
+      </div>
+
+      <div>
+        <input
+          type="radio"
+          name="lengthContract"
+          id="lengthContract1"
+          value="1"
+        />
+        <label for="lengthContract1">1 Year</label>
+
+        <input
+          type="radio"
+          name="lengthContract"
+          id="lengthContract2"
+          value="2"
+        />
+        <label for="lengthContract2">2 Years</label>
+
+        <input
+          type="radio"
+          name="lengthContract"
+          id="lengthContract50"
+          checked
+          value="50"
+        />
+        <label for="lengthContract50">50 Years</label>
+      </div>
+
+      <fieldset>
+        <legend>Personal Info</legend>
+        <div>
+          <label for="fullName">Fullname:</label>
+          <input type="text" name="fullName" id="fullName" list="blah" />
+
+          <datalist id="blah">
+            <option value="a">a</option>
+            <option value="b">b</option>
+            <option value="c">c</option>
+          </datalist>
+        </div>
+
+        <select name="title" id="title">
+          <option value="Necromancer">Necromancer</option>
+          <option value="Jester">Jester</option>
+          <option value="Barbarian">Barbarian</option>
+          <option value="Janitor">Janitor</option>
+        </select>
+      </fieldset>
+
+      <div>
+        <input type="submit" value="E-Sign" />
+      </div>
+    </form>
   </body>
 </html>
