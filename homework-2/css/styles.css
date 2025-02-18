@@ -1,0 +1,94 @@
+body {
+  width: 800px;
+  /* background-color: pink; */
+  margin: 0 auto;
+  min-height: 500px;
+}
+
+h1 {
+  color: purple;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: 0;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+nav {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(255, 0, 0, 1) 100%
+  );
+  height: 75px;
+  font-size: 20px;
+  display: flex;
+  width: 800px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  width: 800px;
+}
+
+main {
+  width: 800px;
+  min-height: 500px;
+  background-color: rgb(244, 244, 244);
+  margin-top: 0;
+  padding-top: 0;
+}
+#author {
+  color: rgb(35, 35, 35);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding-left: 20px;
+}
+
+#hero {
+  width: 800px;
+  height: 300px;
+  background-image: url(../images/winterHero.jpeg);
+  background-size: cover;
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+}
+
+section p {
+  max-width: 300px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.img1 {
+  width: 300px;
+  height: 300px;
+  background-color: brown;
+  background-size: cover;
+  background-image: url(../images/blizzard.jpeg);
+}
+
+.img2 {
+  width: 300px;
+  height: 300px;
+  background-color: brown;
+  background-size: cover;
+  background-image: url(../images/volcano.jpeg);
+}
