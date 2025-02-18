@@ -10,4 +10,4 @@ I saw some of the differences between margin and padding and how they format the
 
 ### Live Link
 
-[Blog Page](https://{username}.github.io/{reponame}/homework-2)
+[Blog Page](https://kugrinov.github.io/InfoInfrastructure/homework-2)
