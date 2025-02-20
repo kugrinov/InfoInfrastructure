@@ -15,3 +15,5 @@ Flexboxes can have a flex-direction of rows and columns. Use jusitfy-content to 
 padding order: top, right, bottom, left
 
 grid template is divided up into fractions (fr), pixels, or a combo
+
+Loose vs strict checks use a different amount of characters. Strict checks look at the data type, loose checks just see the content. So a number x and string x can be true in loose but false in strict
