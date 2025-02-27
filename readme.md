@@ -17,3 +17,7 @@ padding order: top, right, bottom, left
 grid template is divided up into fractions (fr), pixels, or a combo
 
 Loose vs strict checks use a different amount of characters. Strict checks look at the data type, loose checks just see the content. So a number x and string x can be true in loose but false in strict
+
+If you combine a number and a string js will automatically convert it to a string. You can convert stringles to number with Number("") to make it behave properly
+
+Use const when assigning objects and {}
