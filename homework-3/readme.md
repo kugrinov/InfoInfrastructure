@@ -9,3 +9,12 @@ Use .innerHtml to add content to a webpage from javascript. To target the correc
 Example:
 const ulRef = document.querySelector("body > ul");
 ulRef.innerHTML = "<li>Piano</li>, <li>Guitar</li>, <li>Violin</li>, <li>Drums</li>, <li>Saxophone</li>, <li>Flute</li>"
+
+Or you know the quicker way:
+for (let i = 0; i < pets.length; i++) {
+const petType = pets[i];
+console.log(petType)
+
+    petsUlRef.innerHTML += "<li>" + petType + "</li>"
+
+}
