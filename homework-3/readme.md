@@ -6,7 +6,7 @@ console.log(instrument);
 }
 
 Use .innerHtml to add content to a webpage from javascript. To target the correct ul in the reference use "body > ul" When not used the added content was at the top of the page
-Example:
+Longer way:
 const ulRef = document.querySelector("body > ul");
 ulRef.innerHTML = "<li>Piano</li>, <li>Guitar</li>, <li>Violin</li>, <li>Drums</li>, <li>Saxophone</li>, <li>Flute</li>"
 

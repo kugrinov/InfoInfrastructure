@@ -7,9 +7,11 @@ console.log(instrumentList);
 for (let i = 0; i < instrumentList.length; i++) {
     const instrument = instrumentList[i];
     console.log(instrument);
+
+    ulRef.innerHTML += "<li>" + instrument + "</li>"
 }
  
 
-ulRef.innerHTML = "<li>Piano</li> <li>Guitar</li> <li>Violin</li> <li>Drums</li> <li>Saxophone</li> <li>Flute</li>"
+// ulRef.innerHTML = "<li>Piano</li> <li>Guitar</li> <li>Violin</li> <li>Drums</li> <li>Saxophone</li> <li>Flute</li>"
 
 console.log(ulRef.innerHTML)
