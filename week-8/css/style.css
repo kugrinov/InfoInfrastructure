@@ -52,3 +52,7 @@ p {
 body > ul {
   margin: 36px;
 }
+
+main {
+  padding: 10px;
+}

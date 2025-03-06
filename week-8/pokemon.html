@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Window Methods</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="pokemon.html">Window Methods</a>
+        </li>
+        <li>
+          <a href="objects.html">Complex Objects</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Window Methods (Pokemon)</h1>
+
+      <!-- onclick connects to the function in js, remember to call the function with parenthesis -->
+      <button onclick="showAlert()">Alert</button>
+      <!-- can also use an id to link to js, but you need to declare a ref variable in js-->
+      <button id="confirm-btn">Confirm</button>
+      <button onclick="showPrompt()">Prompt</button>
+
+      <div>
+        <button onclick="startJourney()">Start Journey</button>
+
+        <section id="journey"></section>
+      </div>
+    </main>
+
+    <script src="js/pokemon.js"></script>
+  </body>
+</html>
