@@ -24,4 +24,4 @@ console.log(petType)
 To set alt and height attributes through js:
 const imageHtml = "<img src='" + thumbnail + "'alt='" + "Image #" + i + "'height = 300px" + ">";
 
-[Live Link](https://{kugrinov}.github.io/{InfoInfrastructure}/homework-3)
+[Live Link](https://kugrinov.github.io/InfoInfrastructure/homework-3)
