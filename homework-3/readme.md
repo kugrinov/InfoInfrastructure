@@ -1,3 +1,5 @@
+###Key Takeaways
+
 const within for loop should be named differently than the variable used in the array
 Example:
 for (let i = 0; i < instrumentList.length; i++) {
@@ -18,3 +20,8 @@ console.log(petType)
     petsUlRef.innerHTML += "<li>" + petType + "</li>"
 
 }
+
+To set alt and height attributes through js:
+const imageHtml = "<img src='" + thumbnail + "'alt='" + "Image #" + i + "'height = 300px" + ">";
+
+[Live Link](https://{kugrinov}.github.io/{InfoInfrastructure}/homework-3)

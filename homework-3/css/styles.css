@@ -63,3 +63,10 @@ h4 {
   padding-left: 20px;
   padding-top: 0px;
 }
+
+section {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
