@@ -77,7 +77,7 @@ function choosePokemon(e) {
 
     if (confirmChoice) {
         journeyRef.innerHTML += "You chose " + pokemonName + " as your starter pokemon.";
-        myPokemon = {namw: pokemonName, img: pokemonImage}
+        myPokemon = {name: pokemonName, img: pokemonImage}
     }
 
 }
