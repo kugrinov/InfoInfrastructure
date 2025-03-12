@@ -41,27 +41,18 @@ function chooseKeepsake(e) {
 }
 
 
-const animalChoice = [
+
+
+function animalTrial() {
+    journeyRef.innerHTML += "<p>Upon entering the forest you see what looks like a small mouse sitting on a rock staring at you. As you look closer you see that the fur is actually wool. It's a woolly mouse. What do you do?</p>"
+
+    const animalChoice = [
     {name: "Pet the mouse"},
     {name: "Give the mouse a treat from your pack"},
     {name: "Ignore the mouse and keep moving"},
 ]
 
-function animalTrial() {
-    journeyRef.innerHTML += "<p>Upon entering the forest you see what looks like a small mouse sitting on a rock staring at you. As you look closer you see that the fur is actually wool. It's a woolly mouse. What do you do?</p>"
-
-    if (animalChoice.name === "Pet the mouse") {
-        journeyRef.innerHTML += "<p>You chose to pet the mouse! The mouse opens its mouth to reveal massive fangs. It bites down on your hand and strikes with fatal venom. You are dead.</p>";
-
-    } else if (animalChoice.name === "Give the mouse a treat from your pack") {
-        journeyRef.innerHTML += "<p>You chose to give the mouse a treat! The mouse graciously accepts and scampers away, opening up the path.</p>"
-    } else if (animalChoice.name === "Ignore the mouse and keep moving") {
-        journeyRef.innerHTML += "<p>You chose to ignore the mouse. The mouse feels very offended at this and calls all of it's mice friends to devour you. You are dead.</p>"
-    }
-
-
-
-for (let index = 0; index < animalChoice.length; index++) {
+    for (let index = 0; index < animalChoice.length; index++) {
     const animalDecision = animalChoice[index];
     const secondSection = document.createElement("section");
     secondSection.innerHTML += "<h4>" + animalDecision.name + "</h4>";
@@ -78,23 +69,58 @@ for (let index = 0; index < animalChoice.length; index++) {
 
 }
 
-
-const myAnimalDecision = [
-    {name: "Pet the mouse"},
-    {name: "Give the mouse a treat from your pack"},
-    {name: "Ignore the mouse and keep moving"},
-]
-
 function chooseAnimalDecision(e) {
     console.log(e.currentTarget);
     const animalDecisionName = e.currentTarget.dataset.animalDecisionName;
-    const confirmChoice = confirm("You chose " + animalDecisionName);
+    const confirmChoice = confirm("You chose to " + animalDecisionName);
 
+    
     if (confirmChoice) {
-        journeyRef.innerHTML += "You chose to " + animalDecisionName + ". The mouse opens its mouth to reveal massive fangs. It bites down on your hand and strikes with fatal venom. You are dead.";
-     myAnimalDecision = {name: animalDecisionName}
+        journeyRef.innerHTML += "You chose to " + animalDecisionName;
+        myAnimalDecision = {name: animalDecisionName}
     }
 
 
+    const animalBtn = document.createElement("button");
+    animalBtn.onclick = animalMove;
+
+    
+
+   if (myAnimalDecision.name === "Pet the mouse") {
+        animalBtn.innerHTML = "<p>The mouse opens its mouth to reveal massive fangs. It bites down on your hand and strikes with fatal venom. You are dead.</p>";
+        animalBtn.dataset.move = "<p>The mouse opens its mouth to reveal massive fangs. It bites down on your hand and strikes with fatal venom. You are dead.</p>";
+
+    } else if (myAnimalDecision.name === "Give the mouse a treat from your pack") 
+        {
+        animalBtn.innerHTML = "<p>The mouse graciously accepts the treat and scampers away, opening up the path.</p>";
+        animalBtn.dataset.move =  "<p>The mouse graciously accepts the treat and scampers away, opening up the path.</p>";
+    } else if (myAnimalDecision.name === "Ignore the mouse and keep moving") 
+        {
+        animalBtn.innerHTML = "<p>The mouse feels very offended at being ignored and calls all of its mice friends to devour you. You are dead.</p>";
+         animalBtn.dataset.move = "<p>The mouse feels very offended at being ignored and calls all of its mice friends to devour you. You are dead.</p>";
+    }
+
+    journeyRef.appendChild(animalBtn);
 
 }
+
+
+
+function animalMove(e) {
+     const animalMove = e.currentTarget.dataset.move;
+
+      journeyRef.innerHTML +=  animalMove ;
+
+   
+    
+}
+
+
+
+
+
+
+
+
+
+
