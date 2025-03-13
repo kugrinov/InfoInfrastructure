@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+nav {
+  background-color: lightgray;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  padding: 20px;
+  align-items: center;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#brand {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.active {
+  border-bottom: 2px solid black;
+}
+
+.unconventionalDelights {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  padding-top: 40px;
+}
+
+.unconventionalDelights div {
+  align-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+  background-color: rgb(44, 44, 44);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.unconventionalDelights div h1 {
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+h3 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-bottom: 4px solid black;
+  display: inline;
+  margin-left: 20px;
+}
+
+.imageFlex {
+  display: flex;
+  gap: 80px;
+  padding: 20px;
+}
+
+.imageFlex img {
+  height: 200px;
+}
+
+.unconventionalDelights div button {
+  margin-left: 0px;
+}
+
+.imageFlex div h4 {
+  width: 300px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.imageFlex div p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+#catalog article {
+  display: grid;
+  gap: 20px;
+  text-align: center;
+  width: 200px;
+}
+
+article {
+  display: grid;
+
+  align-content: center;
+  padding: 20px;
+}
+article img {
+  height: 200px;
+}
+
+article p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
