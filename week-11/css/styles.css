@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+nav ul {
+  background-color: rgb(229, 3, 124);
+  /* height: 50px; */
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#story {
+  height: 400px;
+  width: 600px;
+  background-color: blanchedalmond;
+  display: flex;
+  flex-direction: column-reverse;
+  /* make vertical scroll bar: */
+  overflow-y: scroll;
+}
+
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 10px;
+  color: rgb(229, 3, 124);
+}
+
+#story p {
+  border: 2px solid rgb(240, 151, 35);
+  padding: 4px 2px;
+  margin-bottom: 4px;
+  background-color: white;
+}
+
+.form {
+  display: grid;
+  width: 600px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 40px;
+}
+
+.button {
+  background-color: rgb(240, 151, 35);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#user-input {
+  border-radius: 10px;
+  border: 2px solid rgb(240, 151, 35);
+}
