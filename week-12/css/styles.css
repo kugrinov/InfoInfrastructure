@@ -78,3 +78,9 @@ section#dreams {
   background-color: rgb(228, 226, 255);
   border: none;
 }
+
+.delete {
+  color: red;
+  font-size: 15px;
+  font-weight: bold;
+}

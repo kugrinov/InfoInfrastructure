@@ -16,46 +16,36 @@ async function getDreams() {
         const currentDream = dreamsDocs.docs[index];
         const data = currentDream.data();
 
-        // this long way happened because of the way modules are private otherwise the commented version should work below way quicker if not using onclick
-        const newDiv = document.createElement("div");
-        newDiv.classList.add("dream");
-        newDiv.innerHTML += `
-        <h4>${data.text}</h4>
-        <p>Likes: ${data.hearts || 0}</p>`
-
-        const dreamHtml = `<div class="dream">
-        <h4>${data.text}</h4>
-        <p>Likes: ${data.hearts || 0}</p> 
-        </div>`;
-
-        const newPTag = document.createElement("p");
-        const newEditButton = document.createElement("button");
-        newEditButton.innerHTML = "Edit";
-        newEditButton.classList.add("edit");
-
-        const newHeartButton = document.createElement("button");
-        newHeartButton.classList.add("heart");
-        newHeartButton.innerHTML = "&hearts;"
-        newHeartButton.dataset.id = currentDream.id;
-        newHeartButton.dataset.hearts = data.hearts || 0;
-        newHeartButton.onclick = addHeart;
-
-        newPTag.appendChild(newEditButton);
-        newPTag.appendChild(newHeartButton);
-        newDiv.appendChild(newPTag);
-
-        dreamsRef.appendChild(newDiv)
+        const hearts = data.hearts || 0;
 
         // back tick string lets you copy html in nice formatting without all the plus signs (on keyboard it's to the left of 1)
-    //     dreamsRef.innerHTML += `<div class="dream">
-    //     <h4>${data.text}</h4>
-    //     <p>Likes: ${data.hearts || 0}</p>
-    //     <p>
-    //       <button class="edit">Edit</button>
-    //       <button class="heart" onclick="addHeart(event)" >&hearts;</button>
-    //     </p>
-    //   </div>`
+        dreamsRef.innerHTML += `
+        <div class="dream">
+        <h4>
+        <span class="delete" data-id="${currentDream.id}">&cross;</span>
+        ${data.text}</h4>
+        <p>Likes: ${hearts}</p>
+        <p>
+          <button class="edit">Edit</button>
+          <button class="heart" data-id="${currentDream.id}" data-hearts="${hearts}" >&hearts;</button>
+        </p>
+      </div>`;
     }
+
+    const heartsRef = document.querySelectorAll(".heart");
+    for (let index = 0; index < heartsRef.length; index++) {
+        heartsRef[index].onclick = addHeart;
+        
+    }
+
+    const crossesRef = document.querySelectorAll(".delete");
+    for (let index = 0; index < crossesRef.length; index++) {
+        crossesRef[index].onclick = forgetDream;
+        
+    }
+        
+
+        
 }
 
 async function addHeart(e) {
@@ -71,3 +61,17 @@ async function addHeart(e) {
 }
 
 getDreams();
+
+async function forgetDream(e) {
+    console.log("Dream to forget", e.target.dataset.id)
+
+    const userConfirmed = confirm("Are you sure you want to forget this dream?");
+
+    if(userConfirmed) {
+        const dreamToDelete = doc(dreamsCollection, e.target.dataset.id);
+
+        await deleteDoc(dreamToDelete);
+
+        getDreams();
+    }
+}
